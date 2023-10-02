@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+ul{
+    display: flex;
+    gap: 30px;
+}
+
+li{
+    list-style-type: none;
+}
+
+li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.home{
+    position: relative;
+}
+
+.home::after,
+.home::before{
+    --scale: 0;
+    --arrow-size: 10px;
+    --tooltip-color: #333;
+
+
+    position: absolute;
+    top: -.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.home::before{
+    --translate-y: calc(-100% - var(--arrow-size));
+
+    content: attr(data-tooltip);
+    color: white;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+    background:  var(--tooltip-color);
+}
+
+.home:hover::before,
+.home:hover:after{
+    --scale: 1;
+}
+
+.home::after{
+    --translate-y: calc(-1 * var(--arrow-size));
+
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-top-color: var(--tooltip-color);
+    transform-origin: top center;
+    /* transform: rotate(180deg); */
+}
+
+.about{
+    position: relative;
+}
+
+.about::after,
+.about::before{
+    --scale: 0;
+    --arrow-size: 10px;
+    --tooltip-color: #333;
+
+
+    position: absolute;
+    top: -.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.about::before{
+    --translate-y: calc(-100% - var(--arrow-size));
+
+    content: attr(data-tooltip);
+    color: white;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+    background:  var(--tooltip-color);
+}
+
+.about:hover::before,
+.about:hover:after{
+    --scale: 1;
+}
+
+.about::after{
+    --translate-y: calc(-1 * var(--arrow-size));
+
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-top-color: var(--tooltip-color);
+    transform-origin: top center;
+    /* transform: rotate(180deg); */
+}
+
+.contact{
+    position: relative;
+}
+
+.contact::after,
+.contact::before{
+    --scale: 0;
+    --arrow-size: 10px;
+    --tooltip-color: #333;
+
+
+    position: absolute;
+    top: -.25rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.contact::before{
+    --translate-y: calc(-100% - var(--arrow-size));
+
+    content: attr(data-tooltip);
+    color: white;
+    padding: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+    background:  var(--tooltip-color);
+}
+
+.contact:hover::before,
+.contact:hover:after{
+    --scale: 1;
+}
+
+.contact::after{
+    --translate-y: calc(-1 * var(--arrow-size));
+
+    content: '';
+    border: var(--arrow-size) solid transparent;
+    border-top-color: var(--tooltip-color);
+    transform-origin: top center;
+    /* transform: rotate(180deg); */
+}
